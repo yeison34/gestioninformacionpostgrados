@@ -1,0 +1,14 @@
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Entities.dll
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Entities.pdb
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Microsoft.Owin.dll
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Microsoft.Owin.Security.dll
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Owin.dll
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Microsoft.Owin.xml
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Microsoft.Owin.Security.xml
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\obj\Debug\Entities.csproj.CopyComplete
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\obj\Debug\Entities.dll
+D:\ejercicios c#\PostgradosGestionInformacion\Entities\obj\Debug\Entities.pdb
