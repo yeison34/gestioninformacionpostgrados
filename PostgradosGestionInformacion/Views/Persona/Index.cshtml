@@ -1,0 +1,48 @@
+﻿@model List<Entities.Persona.VistapersonaModel>
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<a class="btn btn-primary" href="@Url.Action("Edicion","Persona",new { id=0})">Crear Usuario</a>
+<br />
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Usuarios
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Tipo Identificación</th>
+                    <th>Identificación</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Genero</th>
+                    <th>Fechanacimiento</th>
+                    <th>Pais</th>
+                    <th>Departamento</th>
+                    <th>Ciudad</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>@item.Tipodentificacion</td>
+                        <td>@item.Cedula</td>
+                        <td>@item.Nombres</td>
+                        <td>@item.Apellidos</td>
+                        <td>@item.Genero</td>
+                        <td>@item.Fechanacimiento</td>
+                        <td>@item.Pais</td>
+                        <td>@item.Departamento</td>
+                        <td>@item.Ciudad</td>
+                        <td><i class="fas fa-edit"></i><i class="fas fa-crash"></i></td>
+                    </tr>
+                }                
+            </tbody>
+        </table>
+    </div>
+</div>
+

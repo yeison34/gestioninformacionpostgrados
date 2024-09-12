@@ -122,6 +122,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persona\Genero.cs" />
+    <Compile Include="Persona\Persona.cs" />
+    <Compile Include="Persona\PersonaData.cs" />
+    <Compile Include="Persona\TipoidentificacionData.cs" />
+    <Compile Include="Persona\GeneroData.cs" />
+    <Compile Include="Persona\Tipoidentificacion.cs" />
+    <Compile Include="Persona\Vistapersona.cs" />
+    <Compile Include="Persona\VistapersonaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuarios\Rol.cs" />
     <Compile Include="Usuarios\RolData.cs" />
@@ -130,8 +138,14 @@
     <Compile Include="Usuarios\Usuariorol.cs" />
     <Compile Include="Usuarios\UsuariorolData.cs" />
     <Compile Include="Utilidades\Connection.cs" />
+    <Compile Include="Utilidades\Ciudad.cs" />
+    <Compile Include="Utilidades\Departamento.cs" />
+    <Compile Include="Utilidades\CiudadData.cs" />
+    <Compile Include="Utilidades\Pais.cs" />
     <Compile Include="Utilidades\Menu.cs" />
     <Compile Include="Utilidades\MenuData.cs" />
+    <Compile Include="Utilidades\DepartamentoData.cs" />
+    <Compile Include="Utilidades\PaisData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

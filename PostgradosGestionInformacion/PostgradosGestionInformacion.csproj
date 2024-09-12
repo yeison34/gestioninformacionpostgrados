@@ -288,6 +288,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Login\LoginController.cs" />
+    <Compile Include="Controllers\Persona\PersonaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -306,26 +307,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\ingenieria.jpg" />
-    <Content Include="Images\logo.png" />
-    <Content Include="Images\Productos\0000foto.jpg" />
-    <Content Include="Images\Productos\123456IMG_20240808_114127013.jpg" />
-    <Content Include="Images\Productos\189IMG_20240808_114123054.jpg" />
-    <Content Include="Images\Productos\1frijol.png" />
-    <Content Include="Images\Productos\1frontal.png" />
-    <Content Include="Images\Productos\2bolsaleche.png" />
-    <Content Include="Images\Productos\2foto.jpg" />
-    <Content Include="Images\Productos\3lenteja.png" />
-    <Content Include="Images\Productos\4444frijol.png" />
-    <Content Include="Images\Productos\5555foto.jpg" />
-    <Content Include="Images\Productos\5foto.jpg" />
-    <Content Include="Images\Productos\5frontal.png" />
-    <Content Include="Images\Productos\5Imagen1.png" />
-    <Content Include="Images\Productos\foto.jpg" />
-    <Content Include="Images\Productos\frontal.png" />
-    <Content Include="Images\Productos\Imagen1.png" />
-    <Content Include="Images\Productos\kkkkfrontal.png" />
-    <Content Include="Images\Productos\kkkkkkkkkfoto.jpg" />
-    <Content Include="Images\Productos\WhatsApp Image 2024-06-10 at 5.19.35 PM.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -364,6 +345,8 @@
     <Content Include="Views\Shared\_LayoutPrincipal.cshtml" />
     <Content Include="Views\Shared\_LayoutTiendaVirtual.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Persona\Index.cshtml" />
+    <Content Include="Views\Persona\Edicion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
