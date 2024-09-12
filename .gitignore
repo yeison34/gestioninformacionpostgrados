@@ -17,8 +17,6 @@ Data/bin/
 
 *.DotSettings
 
-/PostgradosGestionInformacion/Web.config
-
 /Entities/obj/Release
 /Data/obj/Release
 /PostgradosGestionInformacion/obj/Release
