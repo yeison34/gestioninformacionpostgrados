@@ -1,3 +1,6 @@
+################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
 
 /.vs
 /Data/obj/Debug
@@ -5,7 +8,7 @@
 /Negocio/obj/Debug
 /PostgradosGestionInformacion/bin
 /PostgradosGestionInformacion/obj/Debug
-
+/obj/Debug/netstandard2.0
 PostgradosGestionInformacion/bin/
 
 Entities/bin/
