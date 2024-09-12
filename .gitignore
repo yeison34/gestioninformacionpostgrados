@@ -1,0 +1,45 @@
+# Archivos y directorios de compilación
+bin/
+obj/
+[Ll]og/
+*.log
+*.dmp
+*.tmp
+
+# Archivos de usuario de Visual Studio
+*.user
+*.userosscache
+*.suo
+*.ncb
+*.suo
+.vcxproj
+*.pdb
+*.sdf
+*.ipch
+*.iobj
+*.pch
+*.aps
+*.cache
+*.tmp
+
+# Archivos específicos de Visual Studio
+.vs/
+*.dbmdl
+*.bak
+*.tlog
+
+# Archivos generados por el IDE o herramientas de construcción
+*.csproj.user
+*.vbproj.user
+
+# Otros archivos generados o específicos del entorno
+App_Data/
+AppLogs/
+
+# Archivos de base de datos
+*.mdf
+*.ldf
+*.sqlite
+
+# Configuración de NuGet
+.nuget/
