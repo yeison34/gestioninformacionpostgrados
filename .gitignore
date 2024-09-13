@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Archivos y carpetas generados por la compilación
 /PostgradosGestionInformacion/bin/
 /PostgradosGestionInformacion/obj/Debug/
@@ -49,13 +50,25 @@ AppLogs/
 # Otros archivos generados o específicos del entorno
 App_Data/
 AppLogs/
+=======
 
-# Archivos de base de datos
-*.mdf
-*.ldf
-*.sqlite
-/packages/
+/.vs
+/Data/obj/Debug
+/Entities/obj/Debug
+/Negocio/obj/Debug
+/PostgradosGestionInformacion/bin
+/PostgradosGestionInformacion/obj/Debug
+/obj/Debug/netstandard2.0
+PostgradosGestionInformacion/bin/
 
+Entities/bin/
+
+Data/bin/
+>>>>>>> quitar packages
+
+*.DotSettings
+
+<<<<<<< HEAD
 # Configuración de NuGet
 .nuget/*.bak
 *.tlog
@@ -110,3 +123,9 @@ Data/bin/
 /packages/
 *.cache
 >>>>>>> quitar paqutes no utiles
+=======
+/Entities/obj/Release
+/Data/obj/Release
+/PostgradosGestionInformacion/obj/Release
+*.cache
+>>>>>>> quitar packages
