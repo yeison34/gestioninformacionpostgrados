@@ -5,6 +5,9 @@
 /Entities/bin/
 /Entities/obj/Debug/
 /Entities/obj/Release/
+/Negocio/bin/
+/Negocio/obj/Debug/
+/Negocio/obj/Release/
 /Data/bin/
 /Data/obj/Debug/
 /Data/obj/Release/
@@ -13,6 +16,6 @@
 # Archivos de configuración del IDE
 /.vs
 *.DotSettings
-
+/packages/
 # Archivos de caché
 *.cache
