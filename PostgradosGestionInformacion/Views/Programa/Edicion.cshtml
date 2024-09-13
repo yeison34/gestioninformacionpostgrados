@@ -1,0 +1,40 @@
+﻿@model Entities.Programa.ProgramaEditModel
+@{
+    ViewBag.Title = "Edicion";
+}
+
+@using (Html.BeginForm("Guardar", "Programa", FormMethod.Post))
+            {
+                <input type="hidden" value="@Model.Id" name="Id" />
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(p => p.Codigo)
+                        @Html.TextBoxFor(p => p.Codigo, new { @class = "form-control" })
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.LabelFor(p => p.Nombre)
+                        @Html.TextBoxFor(p => p.Nombre, new { @class = "form-control" })
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.LabelFor(p => p.IdFacultad)
+                        @Html.DropDownListFor(p => p.IdFacultad,Model.ListaFacultades, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(p => p.EsPregrado)
+                        @Html.CheckBoxFor(p => p.EsPregrado)
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.LabelFor(p => p.EsPostgrado)
+                        @Html.CheckBoxFor(p => p.EsPostgrado)
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.LabelFor(p => p.EsActivo)
+                        @Html.CheckBoxFor(p => p.EsActivo)
+                    </div>
+                </div>
+
+                <button type="submit">Guardar</button>
+            }
+

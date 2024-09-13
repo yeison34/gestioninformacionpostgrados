@@ -122,6 +122,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Facultad\Facultad.cs" />
+    <Compile Include="Facultad\FacultadData.cs" />
     <Compile Include="Persona\Genero.cs" />
     <Compile Include="Persona\Persona.cs" />
     <Compile Include="Persona\PersonaData.cs" />
@@ -130,6 +132,8 @@
     <Compile Include="Persona\Tipoidentificacion.cs" />
     <Compile Include="Persona\Vistapersona.cs" />
     <Compile Include="Persona\VistapersonaData.cs" />
+    <Compile Include="Programa\Programa.cs" />
+    <Compile Include="Programa\ProgramaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuarios\Rol.cs" />
     <Compile Include="Usuarios\RolData.cs" />
