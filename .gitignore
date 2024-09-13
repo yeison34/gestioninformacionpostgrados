@@ -40,6 +40,7 @@ AppLogs/
 *.mdf
 *.ldf
 *.sqlite
+/packages/
 
 # Configuración de NuGet
 .nuget/
