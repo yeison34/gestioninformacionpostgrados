@@ -74,3 +74,7 @@ AppLogs/
 
 # Configuración de NuGet
 .nuget/
+/Entities/obj/Release
+/Data/obj/Release
+/PostgradosGestionInformacion/obj/Release
+*.cache
