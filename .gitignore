@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Archivos y carpetas generados por la compilación
 /PostgradosGestionInformacion/bin/
 /PostgradosGestionInformacion/obj/Debug/
@@ -68,6 +69,8 @@ App_Data/
 AppLogs/
 =======
 
+=======
+>>>>>>> quitar packagesm
 /.vs
 /Data/obj/Debug
 /Entities/obj/Debug
@@ -96,5 +99,9 @@ Data/bin/
 /Entities/obj/Release
 /Data/obj/Release
 /PostgradosGestionInformacion/obj/Release
+<<<<<<< HEAD
 *.cache
 >>>>>>> quitar packages
+=======
+*.cache
+>>>>>>> quitar packagesm
