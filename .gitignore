@@ -77,4 +77,5 @@ AppLogs/
 /Entities/obj/Release
 /Data/obj/Release
 /PostgradosGestionInformacion/obj/Release
+/packages/
 *.cache
