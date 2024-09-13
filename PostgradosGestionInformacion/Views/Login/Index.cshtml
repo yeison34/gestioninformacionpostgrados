@@ -3,42 +3,304 @@
     Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
 }
 
-<div class="contenido">
-    <div class="row">
-        <div class="col-sm-12 col-lg-8">
-            <div class="image-container">
-                <img src="~/Images//ingenieria.jpg" />
-            </div>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-            <div class="card">
-                <div class="card-header" style="background:white">
-                    <h3 class="text-center">Login</h3>
-                </div>
-                <div class="card-body">
-                    <form class="text-center p-5" action="@Url.Action("Index","Login")" method="post">
-                        <div class="form-floating mb-5" style="width:25rem">
+<style>
 
-                            @(Html.TextBoxFor(m=>m.UserName,new  { @class = "form-control" }))
-                            @(Html.LabelFor(m => m.UserName))
+    .bg-light {
+        background-color: lightgray !important;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-inline: 3em;
+    }
+
+    .aside-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 4.5em 7em 6.5em;
+        gap: 2.2em;
+        background-color: #fafafa;
+        box-shadow: 7px 6px 10px 1px #747474;
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2em;
+        width: 100%;
+    }
+
+        .form-section > * {
+            font-size: 1.2em;
+        }
+
+    .form-control_borderradius {
+        border-radius: 10px;
+    }
+
+    .form-buttonwrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: clamp(1em, 1.2vw, 2em);
+    }
+
+    .btn_witdh {
+        font-size: 1em;
+        padding-block: 0.3em;
+        width: 40%;
+    }
+
+    .form-rememberme-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .form-rememberme_checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .form-rememberme_checkbox > *, input[type="checkbox"] {
+        margin: 0;
+    }
+
+    form-rememberme_forget {
+    }
+
+    .welcome-wrapper {
+        width: 100%;
+    }
+
+    .hi-text {
+        font-family: "Signika Negative", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.2em;
+        /*letter-spacing: 5px;*/
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: left;
+        margin-right: 0px;
+    }
+
+    .hi-text-small {
+        font-family: "Signika Negative", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.92em;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .welcome-text {
+        display: block;
+        font-family: "Dela Gothic One", sans-serif;
+        font-weight: 400;
+        font-size: 4em;
+        font-style: normal;
+        text-align: left;
+        line-height: 0.9;
+    }
+
+    .aside-info{
+        /*display: flex;
+        flex-direction:column;
+        justify-content:center;*/
+        height: 90%;
+        background-color: #ff6a00;
+    }
+
+    .info-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*width: 100%;*/
+        padding-block: 2em;
+    }
+
+    .aside-info-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        box-shadow: 7px 6px 10px 1px #747474;
+    }
+
+    .header-aside-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        background: rgb(106, 221, 32);
+        background: linear-gradient(180deg, rgb(137 241 70) 63%, rgba(145, 253, 155, 0.5662640056022409) 97%, rgba(0, 0, 0, 0) 100%);
+        height: 37%;
+        z-index: 50
+    }
+
+    .image-container {
+        top: -46px;
+    }
+
+    .image-container img {
+        filter: contrast(0.5) saturate(0.5);
+    }
+
+    .image-container-udenar {
+        width: 30%;
+    }
+
+    .udenar-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .postgrados-text {
+        font-size: 3.5em;
+        font-weight: bold;
+    }
+
+    .udenar-text {
+        font-size: 1.8em;
+        line-height: 1;
+    }
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6 p-0">
+            <div class="aside-wrapper">
+                <div class="welcome-wrapper">
+                    <span class="hi-text">H</span>
+                    <span class="hi-text-small">ola,</span>
+                    <span class="welcome-text">Bienvenido!</span>
+                </div>
+                <form class="form-section" action="@Url.Action("Index","Login")" method="post">
+
+                    <div class="form-field">
+                        @(Html.LabelFor(m => m.UserName))
+                        <div class="form-floating">
+                            @(Html.TextBoxFor(m=>m.UserName,new  { @class = "form-control form-control_borderradius pt-2" }))
                             @(Html.ValidationMessage("UserName", new { @class="text-danger"}))
                         </div>
-                        <div class="form-floating mb-5">
-                            @(Html.PasswordFor(m=>m.Password,new  { @class = "form-control" }))
-                            @(Html.LabelFor(m => m.Password))
+                    </div>
+
+                    <div class="form-field">
+                        @(Html.LabelFor(m => m.Password))
+                        <div class="form-floating">
+                            @(Html.PasswordFor(m=>m.Password,new { @class = "form-control form-control_borderradius pt-2" }))
                             @(Html.ValidationMessage("Password", new { @class="text-danger"}))
                         </div>
-                        <div class="form-floating">
-                            <input type="submit" class="btn btn-success" value="Entrar" />
+
+                    </div>
+
+                    <div class="form-rememberme-wrapper">
+                        <div class="form-rememberme_checkbox">
+                            <input type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Recordarme
+                            </label>
                         </div>
-                    </form>
+                        <div class="form-rememberme_forget">
+                            <a href="#forgetPass">Olvidó su contraseña?</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-section">
+                        <div class="form-buttonwrapper">
+                            <input type="submit" class="btn btn-success btn_witdh" value="Entrar" />
+                            <input type="submit" class="btn btn-success btn_witdh" value="Registrarse" />
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="col-sm-12 col-lg-6 p-0 d-flex align-items-center">
+            <div class="aside-info">
+                <div class="aside-info-wrapper">
+                    <div class="header-aside-info">
+                        <div class="info-text-container">
+                            <span class="postgrados-text">Postgrados</span>
+                            <span class="udenar-text">Universidad de Nariño</span>
+                            <span class="programa-text">Programa</span>
+                            <span class="sistemas-text">Ingeniería de sistemas</span>
+                        </div>
+                    
+                        <div class="image-container-udenar">
+                            <img src="~/Images//udenar-image.png" class="udenar-image"/>
+                        </div>
+
+                    </div>
+                    <div class="image-container">
+                        <img src="~/Images//cover-udenar.jpg" />
+                    </div>
+                
+
                 </div>
-                @if (ViewBag.mensaje != "")
-                {
-                    <small class="text-danger text-center">@ViewBag.mensaje</small>
-                }
             </div>
         </div>
+
     </div>
+
+
+
 </div>
 
+@if (ViewBag.mensaje != "")
+{
+    <small class="text-danger text-center">@ViewBag.mensaje</small>
+}
+
+
+
+<script>
+
+    const rmCheck = document.getElementById("flexCheckChecked"),
+        emailInput = document.getElementById("UserName");
+
+    if (localStorage.checkbox && localStorage.checkbox !== "") {
+        rmCheck.setAttribute("checked", "checked");
+        emailInput.value = localStorage.username;
+    } else {
+        rmCheck.removeAttribute("checked");
+        emailInput.value = "";
+    }
+
+    function lsRememberMe() {
+        if (rmCheck.checked && emailInput.value !== "") {
+            localStorage.username = emailInput.value;
+            localStorage.checkbox = rmCheck.value;
+        } else {
+            localStorage.username = "";
+            localStorage.checkbox = "";
+        }
+    }
+
+</script>
