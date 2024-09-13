@@ -1,4 +1,4 @@
-# Archivos y carpetas generados por la compilaciÃ³n
+# Archivos y carpetas generados por la compilación
 /PostgradosGestionInformacion/bin/
 /PostgradosGestionInformacion/obj/Debug/
 /PostgradosGestionInformacion/obj/Release/
@@ -13,9 +13,64 @@
 /Data/obj/Release/
 /obj/Debug/netstandard2.0
 
-# Archivos de configuraciÃ³n del IDE
+# Archivos de configuración del IDE
 /.vs
 *.DotSettings
 /packages/
-# Archivos de cachÃ©
+# Archivos de caché
 *.cache
+*.bak
+*.tlog
+
+# Archivos generados por el IDE o herramientas de construcción
+*.csproj.user
+*.vbproj.user
+
+# Otros archivos generados o específicos del entorno
+App_Data/
+AppLogs/
+
+# Archivos de base de datos
+*.mdf
+*.ldf
+*.sqlite
+/packages/
+
+# Configuración de NuGet
+.nuget/*.bak
+*.tlog
+
+# Archivos generados por el IDE o herramientas de construcción
+*.csproj.user
+*.vbproj.user
+
+# Otros archivos generados o específicos del entorno
+App_Data/
+AppLogs/
+
+# Archivos de base de datos
+*.mdf
+*.ldf
+*.sqlite
+/packages/
+
+# Configuración de NuGet
+.nuget/*.bak
+*.tlog
+
+# Archivos generados por el IDE o herramientas de construcción
+*.csproj.user
+*.vbproj.user
+
+# Otros archivos generados o específicos del entorno
+App_Data/
+AppLogs/
+
+# Archivos de base de datos
+*.mdf
+*.ldf
+*.sqlite
+/packages/
+
+# Configuración de NuGet
+.nuget/
