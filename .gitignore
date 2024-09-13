@@ -131,8 +131,13 @@ Data/bin/
 /Data/obj/Release
 /PostgradosGestionInformacion/obj/Release
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.cache
 >>>>>>> quitar packages
 =======
 *.cache
 >>>>>>> quitar packagesm
+=======
+/packages/
+*.cache
+>>>>>>> quitar paqutes no utiles
