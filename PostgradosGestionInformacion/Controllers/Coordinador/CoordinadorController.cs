@@ -2,6 +2,7 @@
 using Data.Utilidades;
 using Entities.Coordinador;
 using Microsoft.Ajax.Utilities;
+using Negocio.Coordinador;
 using System;
 using System.Collections.Generic;
 using System.IO;
