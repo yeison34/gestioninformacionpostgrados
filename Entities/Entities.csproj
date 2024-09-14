@@ -50,7 +50,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -77,8 +76,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coordinador\CoordinadorEditModel.cs" />
-    <Compile Include="Coordinador\CoordinadorModel.cs" />
     <Compile Include="Facultad\FacultadModel.cs" />
     <Compile Include="Login\LoginModel.cs" />
     <Compile Include="Persona\GeneroModel.cs" />
