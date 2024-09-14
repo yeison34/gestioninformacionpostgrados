@@ -1,0 +1,31 @@
+﻿@model Entities.Coordinador.CoordinadorEditModel
+@{
+    ViewBag.Title = "Coordinacion Edicion";
+}
+
+@using (Html.BeginForm("VincularCoordinador", "Coordinador", FormMethod.Post, new { @id = "formcoordinador" ,enctype="multipart/form-data"}))
+{
+    <button class="btn btn-success" type="submit">Vincular</button>
+    <br />
+    <br />
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" name="Idpersona" value="@Model.Idpersona" />
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.LabelFor(x=>x.Idprograma)
+            @Html.DropDownListFor(x => x.Idprograma, Model.ListaProgramas, new { @class = "form-control" })
+        </div>
+        <div class="col-sm-3">
+            @Html.LabelFor(x => x.Fechavinculacion)
+            @Html.TextBoxFor(x => x.Fechavinculacion, new { @class = "form-control", @type = "date" })
+        </div>
+        @if (Model.Id==0) { 
+            <div class="col-sm-3">
+                @Html.LabelFor(x => x.Acuerdonombramiento)
+                @Html.TextBoxFor(x => x.fileAcuerdo, new { @class = "form-control", @type = "file" })
+            </div>
+        }        
+    </div>
+}
+
+

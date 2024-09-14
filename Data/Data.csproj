@@ -122,6 +122,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coordinador\Coordinador.cs" />
+    <Compile Include="Coordinador\CoordinadorData.cs" />
     <Compile Include="Facultad\Facultad.cs" />
     <Compile Include="Facultad\FacultadData.cs" />
     <Compile Include="Persona\Genero.cs" />

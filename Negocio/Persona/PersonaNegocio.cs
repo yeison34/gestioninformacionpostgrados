@@ -58,6 +58,7 @@ namespace Negocio.Persona
                 if (persona.Id == 0)
                 {
                     PersonaData.insertarRegistro(persona);
+                    model.Id = persona.Id;
                 }
                 else {
                     PersonaData.actualizarRegistro(persona);

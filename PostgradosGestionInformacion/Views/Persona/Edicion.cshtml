@@ -6,8 +6,15 @@
     <input type="submit" value="Guardar" class="btn btn-success" id="guardarFormulario" />
     <a class="btn btn-primary" href="@Url.Action("Edicion","Persona",new { id=0})">Crear Usuario</a>
     <a class="btn btn-primary" href="@Url.Action("Index","Persona")">Buscar</a>
+    @if (Model.Id != 0)
+    {
+        <a class="btn btn-primary" href="@Url.Action("Coordinador","Coordinador",new { idpersona=Model.Id})">Asignar Coordinación</a>
+        <a class="btn btn-primary" href="@Url.Action("Index","Persona")">Asignar Estudiante </a>
+        <a class="btn btn-primary" href="@Url.Action("Index","Persona")">Asignar Asistente </a>
+    }
 
 </div>
+<br />
 <br />
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
@@ -28,6 +35,7 @@
 
 <br />
 @using (Html.BeginForm("Guardar", "Persona", FormMethod.Post, new { @id = "formpersona" })) { 
+    <input type="hidden" value="@Model.Id" name="Id"/>
 <div class="row">
     <div class="col-sm-3">
         @Html.LabelFor(m => m.Idtipoidentificacion)

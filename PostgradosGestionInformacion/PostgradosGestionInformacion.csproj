@@ -286,6 +286,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Coordinador\CoordinadorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Login\LoginController.cs" />
     <Compile Include="Controllers\Persona\PersonaController.cs" />
@@ -350,8 +351,10 @@
     <Content Include="Views\Persona\Index.cshtml" />
     <Content Include="Views\Persona\Edicion.cshtml" />
     <Content Include="Views\Programa\Edicion.cshtml" />
+    <Content Include="Views\Coordinador\CoordinacionEdicion.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Acuerdos\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
