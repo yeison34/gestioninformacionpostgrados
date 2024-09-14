@@ -1,0 +1,77 @@
+﻿@model PostgradosGestionInformacion.Models.CohorteModel
+
+@{
+    ViewBag.Title = "Crear Cohorte";
+}
+
+<h2>Crear Cohorte</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(true)
+    </div>
+}
+
+@using (Html.BeginForm("CrearCohorte", "Cohorte", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nombre, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control", placeholder = "Nombre de la cohorte" })
+            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FechaResolucion, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.FechaResolucion, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            @Html.ValidationMessageFor(model => model.FechaResolucion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FechaFinalizacion, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.FechaFinalizacion, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            @Html.ValidationMessageFor(model => model.FechaFinalizacion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NumeroEstudiantes, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.NumeroEstudiantes, new { @class = "form-control", type = "number", placeholder = "Número de estudiantes" })
+            @Html.ValidationMessageFor(model => model.NumeroEstudiantes, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.EsActiva, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="form-check">
+                @Html.CheckBoxFor(model => model.EsActiva, new { @class = "form-check-input" })
+                @Html.ValidationMessageFor(model => model.EsActiva, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Crear" class="btn btn-primary" />
+            <a href="@Url.Action("Index", "Cohorte")" class="btn btn-secondary">Obtener Listado</a>
+        </div>
+    </div>
+
+
+}

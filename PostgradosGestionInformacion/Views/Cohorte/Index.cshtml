@@ -1,0 +1,40 @@
+﻿@model List<PostgradosGestionInformacion.Models.CohorteModel>
+
+@{
+    ViewBag.Title = "Listado de Cohortes";
+}
+
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Listado de Cohortes
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                     <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Fecha de Resolución</th>
+                    <th>Fecha de Finalización</th>
+                    <th>Número de Estudiantes</th>
+                    <th>Activa</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombre</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Nombre</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
