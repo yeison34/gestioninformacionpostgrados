@@ -122,6 +122,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cohorte\Cohorte.cs" />
+    <Compile Include="Cohorte\CohorteData.cs" />
     <Compile Include="Persona\Genero.cs" />
     <Compile Include="Persona\Persona.cs" />
     <Compile Include="Persona\PersonaData.cs" />
