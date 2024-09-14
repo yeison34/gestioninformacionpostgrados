@@ -1,0 +1,48 @@
+﻿@model List<Entities.Programa.ProgramaModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<a class="btn btn-primary" href="@Url.Action("Edicion","Programa",new { id=0})">Crear Programa</a>
+<br />
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Programas
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Facultad</th>
+                    <th>Pregrado</th>
+                    <th>Postgrado</th>
+                    <th>Activo</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var programa = Model.FirstOrDefault(f => f.Id == item.Id)?.Nombre;
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Codigo</td>
+                        <td>@item.Nombre</td>
+                        <td>@programa</td>
+                        <td>@item.EsPregrado</td>
+                        <td>@item.EsPostgrado</td>
+                        <td>@item.EsActivo</td>
+                        <td><i class="fas fa-edit"></i><i class="fas fa-crash"></i></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
