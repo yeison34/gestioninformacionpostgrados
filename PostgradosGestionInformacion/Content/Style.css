@@ -54,4 +54,8 @@
     width: 100%; /* Asegura que el botón ocupe el ancho completo del formulario */
 }
 
-
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+    font-size: 1.25em;
+    height: 3em;
+    text-decoration: none;
+}

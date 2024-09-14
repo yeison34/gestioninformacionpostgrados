@@ -17,15 +17,62 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     @Styles.Render("~/Content/css/styles.css")
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        .sb-sidenav .sb-sidenav-menu .nav .nav-link {
+            font-size: 1.25em;
+            height: 3em;
+            text-decoration: none;
+        }
 
+        .btn-hamburger {
+            width: 2em;
+            font-size: 1.6em;
+        }
+
+        .sb-topnav navbar navbar-expand navbar-dark bg-dark{
+            border-radius: 0px !important;
+        }
+
+        .brand-custom {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            width: 235px;
+        }
+
+        .brand-text > * {
+            font-size: 10px;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .image-container-udenar{
+            width: 40%
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand ps-3" href="index.html">DKGOL</a>
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <a class="navbar-brand ps-3 brand-custom" href="index.html">
+
+            <div class="image-container-udenar">
+                <img src="~/Images//udenar-image-invert.png" class="udenar-image" />
+            </div>
+            <div class="brand-text">
+                <p>Sistema de gesti&oacute;n de Pregrados</p>
+                <span>Udenar</span>
+            </div>
+        </a>
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 btn-hamburger" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <ul class="navbar-nav ms-auto me-3 me-lg-4">
             <li>
-                <a class="nav-link" href="@Url.Action("Index","TiendaVirtual")" role="button"><i class="fa-solid fa-store me-1"></i>Tienda Virtual</a>
+                <a class="nav-link" href="@Url.Action("Index","Secciones")" role="button"><i class="fa-solid fa-store me-1"></i>Sección</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -50,16 +97,19 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    DKGOL
+                    Sistema de gesti&oacute;n de Pregrados
                 </div>
             </nav>
         </div>
 
         <div id="layoutSidenav_content" style="margin-top: -50px !important">
-            <div style="height: 50px; background-color: lightgray; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);position:fixed;width:100%;">
+                <div class="image-container-banner">
+                    <img src="~/Images//banner-home.png" class="udenar-image" />
+                </div>
+            @*<div style="height: 50px; background-color: lightgray; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);position:fixed;width:100%;">
                 <h1 style="margin: 8px;">@ViewBag.Title</h1>
-            </div>
-            <main style="margin-top:50px">
+            </div>*@
+            <main style="margin-top:5px">
                 <div class="container-fluid px-3">
                     <br />
                     @RenderBody()
@@ -70,7 +120,7 @@
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">Copyright &copy; Your Website 2022</div>
                         <div>
-                            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+                            <p>&copy; @DateTime.Now.Year - Sistema de gesti&oacute;n de Pregrados</p>
                         </div>
                     </div>
                 </div>
