@@ -1,7 +1,9 @@
 ﻿using Data.Facultad;
+using Data.Persona;
 using Data.Programa;
 using Data.Utilidades;
 using Entities.Facultad;
+using Entities.Persona;
 using Entities.Programa;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,20 @@ namespace PostgradosGestionInformacion.Controllers
         // GET: Programa
         public ActionResult Index()
         {
-            return View();
+            List<ProgramaModel> programas = null;
+            try
+            {
+                programas = ProgramaData.getRegistros().Select(x => new ProgramaModel(x.Id, x.Codigo, x.Nombre, x.IdFacultad, x.EsPregrado, x.EsPostgrado, x.EsActivo)).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Connection.closeConnection();
+            }
+            return View(programas);
         }
 
         public ActionResult Edicion(int id)
@@ -47,6 +62,8 @@ namespace PostgradosGestionInformacion.Controllers
             }
             return View(model);
         }
+
+
         [HttpPost]
         public ActionResult Guardar(ProgramaEditModel programa) {
             try
@@ -69,7 +86,7 @@ namespace PostgradosGestionInformacion.Controllers
             finally { 
                 Connection.closeConnection();
             }
-            return View("Edicion",programa);
+            return RedirectToAction("Index");
         }
     }
 }

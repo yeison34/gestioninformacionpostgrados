@@ -308,7 +308,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+<<<<<<< HEAD
     <Content Include="Images\cover-udenar.jpg" />
+=======
+    <Content Include="Images\images.jpeg" />
+>>>>>>> ultimo cambio
     <Content Include="Images\ingenieria.jpg" />
     <Content Include="Images\udenar-image.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -352,9 +356,13 @@
     <Content Include="Views\Persona\Edicion.cshtml" />
     <Content Include="Views\Programa\Edicion.cshtml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Content Include="Views\Coordinador\CoordinacionEdicion.cshtml" />
 =======
 >>>>>>> formulario Programa
+=======
+    <Content Include="Views\Programa\Index.cshtml" />
+>>>>>>> ultimo cambio
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Acuerdos\" />
