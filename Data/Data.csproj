@@ -122,11 +122,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Coordinador\Coordinador.cs" />
     <Compile Include="Coordinador\CoordinadorData.cs" />
-=======
->>>>>>> formulario Programa
     <Compile Include="Facultad\Facultad.cs" />
     <Compile Include="Facultad\FacultadData.cs" />
     <Compile Include="Persona\Genero.cs" />

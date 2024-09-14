@@ -2,7 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
-<<<<<<< HEAD
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress>true</Use64BitIISExpress>
     <IISExpressSSLPort>44306</IISExpressSSLPort>
@@ -32,7 +31,3 @@
     </VisualStudio>
   </ProjectExtensions>
 </Project>
-=======
-  </PropertyGroup>
-</Project>
->>>>>>> csproj

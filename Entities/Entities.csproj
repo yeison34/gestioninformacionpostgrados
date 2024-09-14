@@ -77,11 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Coordinador\CoordinadorEditModel.cs" />
     <Compile Include="Coordinador\CoordinadorModel.cs" />
-=======
->>>>>>> formulario Programa
     <Compile Include="Facultad\FacultadModel.cs" />
     <Compile Include="Login\LoginModel.cs" />
     <Compile Include="Persona\GeneroModel.cs" />
