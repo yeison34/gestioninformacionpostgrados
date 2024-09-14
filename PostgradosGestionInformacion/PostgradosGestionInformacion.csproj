@@ -308,13 +308,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-<<<<<<< HEAD
     <Content Include="Images\cover-udenar.jpg" />
     <Content Include="Images\images.jpeg" />
-=======
     <Content Include="Images\banner-home.png" />
     <Content Include="Images\cover-udenar.jpg" />
->>>>>>> origin/rama-yessid
     <Content Include="Images\ingenieria.jpg" />
     <Content Include="Images\udenar-image.png" />
     <Content Include="Scripts\bootstrap.js" />
