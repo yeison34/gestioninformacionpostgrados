@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace Data.Models
+namespace Data.Cohorte
 {
-    public class Cohorte
+    public partial class Cohorte
     {
-        public static string NombreTabla = "cohorte";
-        public static string NombreCampoId = "cohorte.id";
-        public static string NombreCampoNombre = "cohorte.nombre";       
-        public static string NombreCampoFechaResolucion = "cohorte.fecha_resolucion";
-        public static string NombreCampoFechaFinalizacion = "cohorte.fecha_finalizacion";
-        public static string NombreCampoNumeroEstudiantes = "cohorte.numero_estudiantes";
-        public static string NombreCampoEsActiva = "cohorte.esactiva";
+        public static string NombreTabla = "cohorte_cohorte";
+        public static string NombreCampoId = "cohorte_cohorte.id";
+        public static string NombreCampoNombre = "cohorte_cohorte.nombre";       
+        public static string NombreCampoFechaResolucion = "cohorte_cohorte.fecharesolucion";
+        public static string NombreCampoFechaFinalizacion = "cohorte_cohorte.fechafinalizacion";
+        public static string NombreCampoNumeroEstudiantes = "cohorte_cohorte.numeroestudiantes";
+        public static string NombreCampoEsActiva = "cohorte_cohorte.esactiva";
 
 
         public int Id { get; set; }

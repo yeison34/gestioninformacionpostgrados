@@ -9,7 +9,7 @@
     @if (Model.Id != 0)
     {
         <a class="btn btn-primary" href="@Url.Action("Coordinador","Coordinador",new { idpersona=Model.Id})">Asignar Coordinación</a>
-        <a class="btn btn-primary" href="@Url.Action("Index","Persona")">Asignar Estudiante </a>
+        <a class="btn btn-primary" href="@Url.Action("Estudiante","Estudiantena",new { idpersona=Model.id})">Asignar Estudiante </a>
         <a class="btn btn-primary" href="@Url.Action("Index","Persona")">Asignar Asistente </a>
     }
 

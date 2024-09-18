@@ -77,8 +77,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cohorte\CohorteModel.cs" />
     <Compile Include="Coordinador\CoordinadorEditModel.cs" />
     <Compile Include="Coordinador\CoordinadorModel.cs" />
+    <Compile Include="Coordinador\VistacoordinadorModel.cs" />
+    <Compile Include="Estudiante\EstudianteEditModel.cs" />
+    <Compile Include="Estudiante\EstudianteModel.cs" />
+    <Compile Include="Estudiante\VistaestudianteModel.cs" />
     <Compile Include="Facultad\FacultadModel.cs" />
     <Compile Include="Login\LoginModel.cs" />
     <Compile Include="Persona\GeneroModel.cs" />

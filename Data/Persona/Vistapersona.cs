@@ -54,7 +54,7 @@ namespace Data.Persona
 
         public string Genero { get; set; }
 
-        public string Tipodentificacion { get; set; }
+        public string Tipoidentificacion { get; set; }
 
         public string Pais { get; set; }
 
@@ -80,7 +80,7 @@ namespace Data.Persona
             Telefono = telefono;
             Idusuario = idusuario;
             Genero= genero;
-            Tipodentificacion= tipoidentificacion;
+            Tipoidentificacion = tipoidentificacion;
             Pais= pais;
             Departamento= departamento;
             Ciudad=ciudad;

@@ -51,8 +51,8 @@ namespace Negocio.Coordinador
                 }
                 else
                 {
-                    model.Esactivo = true;
-                    model.Esvinculado = true;
+                    coordinador.Esactivo = true;
+                    coordinador.Esvinculado = true;
                     CoordinadorData.insertarRegistro(coordinador);
                     model.Id = coordinador.Id;
                 }

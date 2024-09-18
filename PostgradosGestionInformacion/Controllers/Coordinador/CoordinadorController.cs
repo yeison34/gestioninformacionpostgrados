@@ -1,4 +1,5 @@
 ﻿
+using Data.Coordinador;
 using Data.Utilidades;
 using Entities.Coordinador;
 using Microsoft.Ajax.Utilities;
@@ -17,7 +18,19 @@ namespace PostgradosGestionInformacion.Controllers.Coordinador
         // GET: Coordinador
         public ActionResult Index()
         {
-            return View();
+            List<VistacoordinadorModel> model = null;
+            try
+            {
+                model = VistacoordinadorData.getRegistros().Select(x => new VistacoordinadorModel(x.Id, x.Idpersona, x.Idprograma, x.Fechavinculacion, x.Acuerdonombramiento, x.Esactivo, x.Esvinculado, x.Cedula, x.Nombre, x.Nombreprograma)).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally {
+                Connection.closeConnection();
+            }
+            return View(model);
         }
 
         public ActionResult CoordinacionEdicion(int id) {

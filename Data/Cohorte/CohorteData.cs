@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Data.Models;
 using Data.Utilidades;
 using Npgsql;
 using System;
@@ -7,14 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Data.PersonaModel
+namespace Data.Cohorte
 {
-    public static class CohorteData
+    public partial class CohorteData
     {
         public static string SelectTabla()
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT cohorte.id, cohorte.nombre, cohorte.fecha_resolucion,cohorte.fecha_finalizacion,cohorte.numero_estudiantes,cohorte.esactiva FROM cohorte");
+            sql.Append("SELECT cohorte_cohorte.id, cohorte_cohorte.nombre, cohorte_cohorte.fecharesolucion,cohorte_cohorte.fechafinalizacion,cohorte_cohorte.numeroestudiantes,cohorte_cohorte.esactiva FROM cohorte_cohorte");
             return sql.ToString();
         }
         public static List<Cohorte> GetCohortes()
@@ -39,9 +38,9 @@ namespace Data.PersonaModel
         {
            try
             {
-                string sql = "INSERT INTO cohorte(id,nombre,fecha_resolucion,fecha_finalizacion,numero_estudiantes,esactiva) values (@id,@nombre, @fecha_resolucion, @fecha_finalizacion,@numero_estudiantes,@esactiva)";
+                string sql = "INSERT INTO cohorte_cohorte(id,nombre,fecharesolucion,fechafinalizacion,numeroestudiantes,esactiva) values (@id,@nombre, @fecharesolucion, @fechafinalizacion,@numeroestudiantes,@esactiva)";
                 var conexion = Connection.getConnection();
-                int id = conexion.ExecuteScalar<int>("select nextval('cohorte_id_seq'::regclass)");
+                int id = conexion.ExecuteScalar<int>("select nextval('cohorte_cohorte_id_seq'::regclass)");
                 cohorte.Id = id;
                 conexion.Execute(sql,cohorte);
             }
@@ -51,40 +50,44 @@ namespace Data.PersonaModel
             }
             return cohorte;
         }
-        //public static void ActualizarCohorte(Cohorte cohorte)
-        //{
-        //    string sql = $"UPDATE {Cohorte.NombreTabla} SET " +
-        //                 $"{Cohorte.NombreCampoNombre} = @Nombre, " +
-        //                 $"{Cohorte.NombreCampoFechaResolucion} = @FechaResolucion, " +
-        //                 $"{Cohorte.NombreCampoFechaFinalizacion} = @FechaFinalizacion, " +
-        //                 $"{Cohorte.NombreCampoNumeroEstudiantes} = @NumeroEstudiantes, " +
-        //                 $"{Cohorte.NombreCampoEsActiva} = @EsActiva " +
-        //                 $"WHERE {Cohorte.NombreCampoCodigo} = @Codigo";
 
-        //    try
-        //    {
-        //        using (NpgsqlConnection conn = Connection.getConnection())
-        //        {
-        //            conn.Open();
-        //            using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
-        //            {
-        //                cmd.Parameters.AddWithValue("Nombre", cohorte.Nombre);
-        //                cmd.Parameters.AddWithValue("FechaResolucion", cohorte.FechaResolucion);
-        //                cmd.Parameters.AddWithValue("FechaFinalizacion", (object)cohorte.FechaFinalizacion ?? DBNull.Value);
-        //                cmd.Parameters.AddWithValue("NumeroEstudiantes", (object)cohorte.NumeroEstudiantes ?? DBNull.Value);
-        //                cmd.Parameters.AddWithValue("EsActiva", cohorte.EsActiva);
-        //                cmd.Parameters.AddWithValue("Codigo", cohorte.Codigo);
+        public static Cohorte getRegistroPorId(int id)
+        {
+            Cohorte cohortes = null;
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(SelectTabla());
+                sql.Append(" WHERE cohorte_cohorte.id=@id");
+                var conexion = Connection.getConnection();
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("id",id);
+                cohortes = conexion.Query<Cohorte>(sql.ToString(),parametros).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener cohortes: " + ex.Message);
+            }
 
-        //                cmd.ExecuteNonQuery();
-        //            }
-        //            conn.Close();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception("Error al actualizar la cohorte: " + ex.Message);
-        //    }
-        //}
+            return cohortes;
+        }
+
+        public static void actualizarRegistro(Cohorte cohorte)
+        {
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append("UPDATE cohorte_cohorte set nombre=@nombre,fecharesolucion=@fecharesolucion,fechafinalizacion=@fechafinalizacion,numeroestudiantes=@numeroestudiantes,esactiva=@esactiva");
+                sql.Append(" WHERE id=@id");
+                var conexion = Connection.getConnection();
+                conexion.Execute(sql.ToString(), cohorte);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al crear la cohorte: " + ex.Message);
+            }
+        }
+
     }
 
 }

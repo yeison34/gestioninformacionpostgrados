@@ -27,7 +27,7 @@ namespace digiturnopro.Controllers.Login
                 }
                 if (model.UserName == "123" && model.Password == "12345678")
                 {
-                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1,model.UserName,DateTime.Now,DateTime.Now.AddMinutes(3),true, "",FormsAuthentication.FormsCookiePath);
+                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1,model.UserName,DateTime.Now,DateTime.Now.AddMinutes(30),true, "",FormsAuthentication.FormsCookiePath);
                     HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket)) {
                         HttpOnly = true,
                     };

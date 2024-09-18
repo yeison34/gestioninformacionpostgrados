@@ -20,7 +20,7 @@ namespace PostgradosGestionInformacion.Controllers.Persona
             List<VistapersonaModel> usuarios = null;
             try
             {
-                usuarios = VistapersonaData.getRegistros().Select(x => new VistapersonaModel(x.Id,x.Idtipoidentificacion,x.Cedula,x.Nombres,x.Apellidos,x.Idgenero,x.Fechanacimiento,x.Idpais,x.Iddepartamento,x.Idciudad,x.Correo,x.Telefono,x.Idusuario,x.Genero,x.Tipodentificacion,x.Pais,x.Departamento,x.Ciudad)).ToList();
+                usuarios = VistapersonaData.getRegistros().Select(x => new VistapersonaModel(x.Id,x.Idtipoidentificacion,x.Cedula,x.Nombres,x.Apellidos,x.Idgenero,x.Fechanacimiento,x.Idpais,x.Iddepartamento,x.Idciudad,x.Correo,x.Telefono,x.Idusuario,x.Genero,x.Tipoidentificacion,x.Pais,x.Departamento,x.Ciudad)).ToList();
             }
             catch (Exception ex)
             {

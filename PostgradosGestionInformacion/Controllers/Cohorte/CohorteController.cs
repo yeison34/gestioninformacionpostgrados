@@ -1,7 +1,7 @@
-﻿using Data.Models;
-using Data.PersonaModel;
+﻿using Data.Cohorte;
 using Data.Utilidades;
-using PostgradosGestionInformacion.Models;
+using Entities.Cohorte;
+using Negocio.Cohorte;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,32 +11,17 @@ namespace PostgradosGestionInformacion.Controllers
 {
     public class CohorteController : Controller
     {
-        public ActionResult CrearCohorte()
-        {
-            return View();
-        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CrearCohorte(CohorteModel model)
+        public ActionResult Guardar(CohorteModel model)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var cohorte = new Cohorte(
-                        0,
-                        model.Nombre,
-                        model.FechaResolucion,
-                        model.FechaFinalizacion,
-                        model.NumeroEstudiantes,
-                        model.EsActiva
-                    );
-
-                    CohorteData.CrearCohorte(cohorte);
-
-                    TempData["SuccessMessage"] = "¡La cohorte fue creada exitosamente!";
-                    return RedirectToAction("CrearCohorte");
+                    model=CohorteNegocio.GuardarCohorte(model);
+                    TempData["SuccessMessage"] = "¡Proceso exitosamente!";
                 }
                 catch (Exception ex)
                 {
@@ -44,7 +29,7 @@ namespace PostgradosGestionInformacion.Controllers
                 }
             }
 
-            return View(model);
+            return View("Edicion",model);
         }
         public ActionResult Index()
         {
@@ -65,56 +50,20 @@ namespace PostgradosGestionInformacion.Controllers
             return View(cohortes);
         }
 
-
-        //public ActionResult EditarCohorte(int id)
-        //{
-        //    var cohorte = CohorteData.GetCohortes().FirstOrDefault(c => c.Codigo == id);
-        //    if (cohorte == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-
-        //    var model = new CohorteModel(
-        //        cohorte.Codigo,
-        //        cohorte.Nombre,
-        //        cohorte.FechaResolucion,
-        //        cohorte.FechaFinalizacion,
-        //        cohorte.NumeroEstudiantes,
-        //        cohorte.EsActiva
-        //    );
-
-        //    return View(model);
-        //}
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult EditarCohorte(CohorteModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            var cohorte = new Cohorte(
-        //                model.Codigo,
-        //                model.Nombre,
-        //                model.FechaResolucion,
-        //                model.FechaFinalizacion,
-        //                model.NumeroEstudiantes,
-        //                model.EsActiva
-        //            );
-
-        //            CohorteData.ActualizarCohorte(cohorte);
-
-        //            TempData["SuccessMessage"] = "¡La cohorte fue actualizada exitosamente!";
-        //            return RedirectToAction("Index");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            ModelState.AddModelError("", "Error al actualizar la cohorte: " + ex.Message);
-        //        }
-        //    }
-
-        //    return View(model);
-        //}
+        public ActionResult Edicion(int id) {
+            CohorteModel model = new CohorteModel();
+            try
+            {
+                model = CohorteNegocio.ObtenerInformacionVinculacionCoordinadorPorId(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { 
+                Connection.closeConnection();
+            }
+            return View(model);
+        }
     }
 }

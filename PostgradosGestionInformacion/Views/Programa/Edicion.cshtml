@@ -4,30 +4,7 @@
 }
 
 <style>
-    body {
-        background-image: url('@Url.Content("~/Images/images.jpeg")');
-        background-size: cover;
-        background-position: center;
-    }
-    .body {
-        
-    }
-    .row{
-        margin: 15px;
-        font-size: 28px;
-        color: black;
-    }
-    .boton{
-        display:flex;
-        align-items: center;
-        justify-content:center;
-    }
-    .btn {
-        font-size: 18px; 
-        width: 200px; 
-        height: 50px;
-        border-radius: 10px;
-    }
+   
 </style>
 <div class = "body">
     @using (Html.BeginForm("Guardar", "Programa", FormMethod.Post))
@@ -47,6 +24,8 @@
                 @Html.DropDownListFor(p => p.IdFacultad, Model.ListaFacultades, new { @class = "form-control", required = "required" })
             </div>
         </div>
+        <br />
+        <br />
         <div class="row">
             <div class="col-sm-3">
                 @Html.LabelFor(p => p.EsPregrado)

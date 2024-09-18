@@ -1,0 +1,37 @@
+﻿@model List<Entities.Coordinador.VistacoordinadorModel>
+@{
+    ViewBag.Title = "Coordinadores";
+}
+
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Listado de Coordinadores
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Programa</th>
+                    <th>Fecha Vinculacion</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Cedula</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Nombreprograma</td>
+                        <td>@item.Fechavinculacion</td>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -14,7 +14,6 @@
         <table id="datatablesSimple">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Codigo</th>
                     <th>Nombre</th>
                     <th>Facultad</th>
@@ -27,12 +26,10 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    var programa = Model.FirstOrDefault(f => f.Id == item.Id)?.Nombre;
                     <tr>
-                        <td>@item.Id</td>
                         <td>@item.Codigo</td>
                         <td>@item.Nombre</td>
-                        <td>@programa</td>
+                        <td>INGENIERIA</td>
                         <td>@item.EsPregrado</td>
                         <td>@item.EsPostgrado</td>
                         <td>@item.EsActivo</td>

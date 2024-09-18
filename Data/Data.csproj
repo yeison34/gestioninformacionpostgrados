@@ -122,15 +122,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Coordinador\Coordinador.cs" />
     <Compile Include="Coordinador\CoordinadorData.cs" />
+    <Compile Include="Coordinador\Vistacoordinador.cs" />
+    <Compile Include="Coordinador\VistacoordinadorData.cs" />
+    <Compile Include="Estudiante\Estudiante.cs" />
+    <Compile Include="Estudiante\EstudianteData.cs" />
+    <Compile Include="Estudiante\Vistaestudiante.cs" />
+    <Compile Include="Estudiante\VistaestudianteData.cs" />
     <Compile Include="Facultad\Facultad.cs" />
     <Compile Include="Facultad\FacultadData.cs" />
-=======
     <Compile Include="Cohorte\Cohorte.cs" />
     <Compile Include="Cohorte\CohorteData.cs" />
->>>>>>> cohortes
     <Compile Include="Persona\Genero.cs" />
     <Compile Include="Persona\Persona.cs" />
     <Compile Include="Persona\PersonaData.cs" />
@@ -142,6 +145,8 @@
     <Compile Include="Programa\Programa.cs" />
     <Compile Include="Programa\ProgramaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Semestre\Semestre.cs" />
+    <Compile Include="Semestre\SemestreData.cs" />
     <Compile Include="Usuarios\Rol.cs" />
     <Compile Include="Usuarios\RolData.cs" />
     <Compile Include="Usuarios\Usuario.cs" />
