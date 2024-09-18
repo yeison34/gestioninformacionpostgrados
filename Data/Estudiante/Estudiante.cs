@@ -77,7 +77,6 @@ namespace Data.Estudiante
             }
         }
 
-        public Data.
 
         public Estudiante()
         {
