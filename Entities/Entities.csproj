@@ -50,6 +50,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -84,7 +85,9 @@
     <Compile Include="Persona\TipoidentificacionModel.cs" />
     <Compile Include="Persona\VistapersonaModel.cs" />
     <Compile Include="Programa\ProgramaEditModel.cs" />
+    <Compile Include="Programa\ProgramaLstModel.cs" />
     <Compile Include="Programa\ProgramaModel.cs" />
+    <Compile Include="Programa\ResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\CiudadModel.cs" />
     <Compile Include="Utilidades\DepartamentoModel.cs" />

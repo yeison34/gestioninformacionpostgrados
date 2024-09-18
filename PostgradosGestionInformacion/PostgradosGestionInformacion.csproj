@@ -302,12 +302,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\css\styles_Edicion.css" />
+    <Content Include="Content\css\styls_Index.css" />
     <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\images.jpeg" />
     <Content Include="Images\ingenieria.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -328,6 +329,7 @@
     <Content Include="Scripts\jsdatatable\img\error-404-monochrome.svg" />
     <Content Include="Scripts\js\datatables-simple-demo.js" />
     <Content Include="Scripts\js\scripts.js" />
+    <Content Include="Scripts\js\script_Edicion.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -353,6 +355,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Archivo_Programas\" />
+    <Folder Include="Images\Logos_Programas\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

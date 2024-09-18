@@ -1,0 +1,46 @@
+﻿.btn {
+    margin-bottom: 10px;
+    margin-right: 17px;
+    border: 2px solid black;
+    margin-top: 8px;
+    font-size: 14px;
+    width: 50px;
+    height: auto;
+    border-radius: 17px;
+    transition: 1s all;
+}
+
+.btn:hover {
+    background-color: coral;
+    cursor: pointer;
+    transform: scale(1.2);
+    color: purple;
+    }
+/* Aplicar color a los encabezados de la tabla */
+th {
+    color: black;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Cooper;
+}
+
+td {
+    font-size: 12px;
+    font-family: 'Franklin Gothic Book';
+}
+/* Aplicar bordes a las filas de la tabla */
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* Bordes solo para las filas (no el encabezado) */
+tr:nth-child(even) {
+    background-color: moccasin;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 15px;
+}

@@ -1,68 +1,86 @@
 ﻿@model Entities.Programa.ProgramaEditModel
 @{
-    ViewBag.Title = "Edición";
+    ViewBag.Title = "Programa";
 }
 
-<style>
-    body {
-        background-image: url('@Url.Content("~/Images/images.jpeg")');
-        background-size: cover;
-        background-position: center;
-    }
-    .body {
-        
-    }
-    .row{
-        margin: 15px;
-        font-size: 28px;
-        color: black;
-    }
-    .boton{
-        display:flex;
-        align-items: center;
-        justify-content:center;
-    }
-    .btn {
-        font-size: 18px; 
-        width: 200px; 
-        height: 50px;
-        border-radius: 10px;
-    }
-</style>
-<div class = "body">
-    @using (Html.BeginForm("Guardar", "Programa", FormMethod.Post))
-    {
-        <input type="hidden" value="@Model.Id" name="Id" />
-        <div class="row">
-            <div class="col-sm-3">
-                @Html.LabelFor(p => p.Codigo)
-                @Html.TextBoxFor(p => p.Codigo, new { @class = "form-control", required = "required" })
-            </div>
-            <div class="col-sm-3">
-                @Html.LabelFor(p => p.Nombre)
-                @Html.TextBoxFor(p => p.Nombre, new { @class = "form-control", required = "required" })
-            </div>
-            <div class="col-sm-3">
-                @Html.LabelFor(p => p.IdFacultad)
-                @Html.DropDownListFor(p => p.IdFacultad, Model.ListaFacultades, new { @class = "form-control", required = "required" })
-            </div>
+<head>
+    <link rel="stylesheet" href="~/Content/css/styles_Edicion.css" />
+</head>
+<canvas id="particle-canvas"></canvas>
+    <div class="form-container">
+        <div class="form-content">
+            @using (Html.BeginForm("Guardar", "Programa", FormMethod.Post, new {enctype = "multipart/form-data"}))
+            {
+                <input type="hidden" value="@Model.Id" name="Id" />
+                <div class="row">
+                    <div class="col-sm-4">
+                        @Html.Label("Còdigo De Vinculaciòn")
+                        @Html.TextBoxFor(p => p.Codigo, new { @class = "form-control", required = "required" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("Nombre Del Programa")
+                        @Html.TextBoxFor(p => p.Nombre, new { @class = "form-control", required = "required" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("Facultad")
+                        @Html.DropDownListFor(p => p.IdFacultad, Model.ListaFacultades, new { @class = "form-control", required = "required" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        @Html.Label("Correo")
+                        @Html.TextBoxFor(p => p.Correo, new { @class = "form-control", type = "email", required = "required" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("Descripciòn")
+                        @Html.TextBoxFor(p => p.Descripcion, new { @class = "form-control", required = "required" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("Lineas De Trabajo")
+                        @Html.DropDownListFor(p => p.LineasTrabajo, Model.ListaCategorias, "Seleccione una categoría", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        @Html.Label("Fecha De Resoluciòn")
+                        @Html.TextBoxFor(p => p.Fecha, new { @class = "form-control", type = "date", required = "required" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("# Resoluciòn Registro Calificado")
+                        @Html.TextBoxFor(p => p.NumeroRes, new { @class = "form-control", type = "text", required = "required" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("Cargar Logo Del Programa")
+                        @Html.TextBoxFor(p => p.LogoPath, new { @class = "form-control", type = "file", accept = "image/*", required = "required" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        @Html.Label("Archivo De Resoluciòn Registro Calificado")
+                        @Html.TextBoxFor(p => p.ArchivoPath, new { @class = "form-control", type = "file", accept = "application/pdf", required = "required" })
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        @Html.Label("Pregrado")
+                        @Html.CheckBoxFor(p => p.EsPregrado)
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("Postgrado")
+                        @Html.CheckBoxFor(p => p.EsPostgrado)
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.Label("Activo")
+                        @Html.CheckBoxFor(p => p.EsActivo)
+                    </div>
+                </div>
+                <div class="boton">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <a class="btn btn-info" href="@Url.Action("Index","Programa")">Cancelar</a>
+                </div>
+            }
         </div>
-        <div class="row">
-            <div class="col-sm-3">
-                @Html.LabelFor(p => p.EsPregrado)
-                @Html.CheckBoxFor(p => p.EsPregrado)
-            </div>
-            <div class="col-sm-3">
-                @Html.LabelFor(p => p.EsPostgrado)
-                @Html.CheckBoxFor(p => p.EsPostgrado)
-            </div>
-            <div class="col-sm-3">
-                @Html.LabelFor(p => p.EsActivo)
-                @Html.CheckBoxFor(p => p.EsActivo)
-            </div>
-        </div>
-        <div class="boton">
-            <button type="submit" class="btn btn-success">Guardar</button>
-        </div>
-     }
-</div>
+    </div>
+
+<script src="~/Scripts/js/script_Edicion.js"></script>
