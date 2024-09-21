@@ -289,7 +289,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Login\LoginController.cs" />
     <Compile Include="Controllers\Persona\PersonaController.cs" />
-    <Compile Include="Controllers\ProgramaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

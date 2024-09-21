@@ -1,7 +1,6 @@
 ################################################################################
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
-
 /.vs
 /Data/obj/Debug
 /Entities/obj/Debug
@@ -20,4 +19,5 @@ Data/bin/
 /Entities/obj/Release
 /Data/obj/Release
 /PostgradosGestionInformacion/obj/Release
+/packages
 *.cache
