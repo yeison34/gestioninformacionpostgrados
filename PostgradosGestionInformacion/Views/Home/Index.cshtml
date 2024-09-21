@@ -2,19 +2,168 @@
     ViewBag.Title = "";
 }
 
+<style>
 
+
+    .module {
+        width: 20em;
+        height: 20em;
+        background: #0b8938;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: ease-in 0.3s;
+        
+        border-radius: 8px;
+    }
+
+    .module-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 2em;
+        gap: 3em;
+    }
+
+    .module-container-image {
+        height: 16em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .module-container a{
+        color: initial;
+        text-decoration: none;
+    }
+
+    .module-text{
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+        height: 5em;
+        transition: ease-in 0.2s;
+    }
+     
+    .link-section > *{
+        text-decoration: none;
+    }
+
+    .link-section {
+        transition: ease-in 0.2s;
+    }
+
+    .link-section:hover{
+        transform: scale(1.09);
+    }
+
+    .link-section:hover .module {
+        background-color: #fafafa;
+    }
+
+    .link-section:hover .icon {
+        color: #0b8938;
+    }
+
+    .link-section:hover .text-container {
+        background-color: #0b8938;
+    }
+
+    .link-section:hover .module-text{
+        color: #fafafa;
+    }
+
+    .icon {
+        font-size: 8em;
+        color: white;
+        transition: ease-in 0.2s;
+    }
+
+    .module-text {
+        font-weight: bold;
+        font-size: 2.2em;
+        text-decoration: none;
+        color: #0b8938;
+        transition: ease-in 0.2s;
+    }
+</style>
 
 <div class="jumbotron">
     <h1>Bienvenido usuario!</h1>
 
 
     <div class="module-container">
-        <div class="module">
-            <span class="module-text">Sección 1</span>
-            <div class="module-img">
-                <img src=""/>
+
+
+
+        <a href="/GestionInformacion/Persona/Index" class="link-section">
+            <div class="module">
+                <div class="module-container-image">
+                    <div class="module-img">
+                        <i class="fas fa-users icon"></i>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <span class="module-text">Personas</span>
+                </div>
             </div>
-        </div>
+        </a>
+        <a href="/GestionInformacion/Coordinador/Index" class="link-section">
+            <div class="module">
+                <div class="module-container-image">
+                    <div class="module-img">
+                        <i class="fas fa-user-tie icon"></i>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <span class="module-text">Coordinadores</span>
+
+                </div>
+            </div>
+
+        </a>
+        <a href="/GestionInformacion/Estudiante/Index" class="link-section">
+            <div class="module">
+                <div class="module-container-image">
+                    <div class="module-img">
+                        <i class="fas fa-user-graduate icon"></i>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <span class="module-text">Estudiante</span>
+                </div>
+            </div>
+        </a>
+        <a href="/GestionInformacion/Programa/Index" class="link-section">
+            <div class="module">
+                <div class="module-container-image">
+                    <div class="module-img">
+                        <i class="fas fa-cubes icon "></i>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <span class="module-text">Programas</span>
+                </div>
+            </div>
+        </a>
+        <a href="/GestionInformacion/Cohorte/Index" class="link-section">
+            <div class="module">
+                <div class="module-container-image">
+                    <div class="module-img">
+                        <i class="fas fa-business-time icon"></i>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <span class="module-text">Cohortes</span>
+                </div>
+            </div>
+        </a>
     </div>
    
 </div>
